@@ -33,5 +33,6 @@
 
 # Android stuff
 **/build/**
-.gradle/**
+**/.gradle/**
 **/.externalNativeBuild/**
+**/local.properties
