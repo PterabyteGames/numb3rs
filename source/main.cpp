@@ -35,14 +35,8 @@ int android_handle_input(android_app* app, AInputEvent* event)
 	int handled = 0;
 	if (AInputEvent_getType(event) == AINPUT_EVENT_TYPE_MOTION)
 	{
-		LOGI("Registed %zu touches", AMotionEvent_getPointerCount(event));
-		handled     = 1;
-		auto action = AMotionEvent_getAction(event);
-		if (action == AMOTION_EVENT_ACTION_DOWN)
-		{
-			LOGI("Registed %zu touches", AMotionEvent_getPointerCount(event));
-			handled = 1;
-		}
+		LOGI("Registered %zu touches", AMotionEvent_getPointerCount(event));
+		handled = 1;
 	}
 
 	return handled;
